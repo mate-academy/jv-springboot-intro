@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    public final MateService mateService;
+    private final MateService mateService;
 
     @Autowired
     public HelloController(MateService mateService) {
@@ -16,7 +16,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello " + mateService.getValue();
+        return "Hello, " + mateService.getValue();
     }
 
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class MateService {
     @Value("${mate.academy.key}")
     private String mateValue;
+
     public String getValue() {
         return mateValue;
     }
