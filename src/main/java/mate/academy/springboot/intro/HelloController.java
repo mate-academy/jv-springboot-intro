@@ -1,4 +1,4 @@
-package mate.academy.springboot.intro.controller;
+package mate.academy.springboot.intro;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
