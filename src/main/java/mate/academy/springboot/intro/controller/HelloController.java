@@ -16,7 +16,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello " + mateService.getValue();
+        return "Hello" + mateService.getValue();
     }
 
 }
