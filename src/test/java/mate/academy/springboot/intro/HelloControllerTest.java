@@ -34,7 +34,7 @@ public class HelloControllerTest {
   public void controller_HasOneMethod_Ok() {
     int actual = HelloController.class.getDeclaredMethods().length;
     assertEquals(1, actual,
-        "HelloController should have only one method");
+        "mate.academy.springboot.intro.HelloController should have only one method");
   }
 
   @Test
