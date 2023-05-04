@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class HelloServiceImpl implements HelloService {
     @Value("${mate.hello.value}")
     private String value;
+
     @Override
     public String sayHello() {
         return "Hello, " + value;
