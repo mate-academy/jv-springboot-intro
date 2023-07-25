@@ -13,7 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>intro</name>
     <description>Demo project for Spring Boot</description>
-
     <properties>
         <java.version>11</java.version>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
@@ -21,7 +20,6 @@
             https://raw.githubusercontent.com/mate-academy/style-guides/master/java/checkstyle.xml
         </maven.checkstyle.plugin.configLocation>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
