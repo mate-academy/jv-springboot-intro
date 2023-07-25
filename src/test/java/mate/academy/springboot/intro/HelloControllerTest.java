@@ -29,7 +29,6 @@ public class HelloControllerTest {
   private MockMvc mockMvc;
   @Value("${server.port}")
   private int port;
-
   @Test
   public void controller_HasOneMethod_Ok() {
     int actual = HelloController.class.getDeclaredMethods().length;
@@ -58,7 +57,6 @@ public class HelloControllerTest {
     String actual = mvcResult.getResponse().getContentAsString();
     assertEquals(EXPECTED_RESPONSE, actual);
   }
-
   @Test
   public void port_IsValid_Ok() {
     assertEquals(EXPECTED_PORT, port);
