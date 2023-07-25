@@ -1,10 +1,8 @@
 package mate.academy.springboot.intro;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import mate.academy.springboot.intro.controller.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +15,8 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.bind.annotation.GetMapping;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @AutoConfigureMockMvc
 @ExtendWith(SpringExtension.class)
@@ -34,27 +34,27 @@ public class HelloControllerTest {
   public void controller_HasOneMethod_Ok() {
     int actual = HelloController.class.getDeclaredMethods().length;
     assertEquals(1, actual,
-        "HelloController should have only one method");
+            "HelloController should have only one method");
   }
 
   @Test
   public void method_SignatureValid_Ok() {
     Method method = HelloController.class.getDeclaredMethods()[0];
     assertTrue(Modifier.isPublic(method.getModifiers()),
-        "Method should be public");
+            "Method should be public");
     assertEquals(String.class, method.getReturnType(),
-        "Return type of the method should be String");
+            "Return type of the method should be String");
     assertEquals(0, method.getParameters().length,
-        "Method shouldn't have parameters");
+            "Method shouldn't have parameters");
     assertTrue(method.isAnnotationPresent(GetMapping.class),
-        "Method should accept GET requests");
+            "Method should accept GET requests");
   }
 
   @Test
   public void controller_HasHelloEndpointWithValidResponse_Ok() throws Exception {
     MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(ENDPOINT))
-        .andExpect(MockMvcResultMatchers.status().isOk())
-        .andReturn();
+            .andExpect(MockMvcResultMatchers.status().isOk())
+            .andReturn();
     String actual = mvcResult.getResponse().getContentAsString();
     assertEquals(EXPECTED_RESPONSE, actual);
   }
