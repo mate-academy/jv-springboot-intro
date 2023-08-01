@@ -1,6 +1,6 @@
 package mate.academy.springboot.intro;
 
-import mate.academy.springboot.controller.HelloController;
+import mate.academy.springboot.intro.controller.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
