@@ -1,8 +1,8 @@
 package mate.academy.springboot.intro;
 
+import mate.academy.springboot.intro.controller.HelloController;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import org.junit.jupiter.api.Test;
