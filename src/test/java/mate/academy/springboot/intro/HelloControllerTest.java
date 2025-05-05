@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.bind.annotation.GetMapping;
+import mate.academy.springboot.intro.controller.HelloController;
 
 @AutoConfigureMockMvc
 @ExtendWith(SpringExtension.class)
