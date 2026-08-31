@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @SpringBootTest
 public class HelloControllerTest {
   private static final String ENDPOINT = "/hello";
-  private static final String EXPECTED_RESPONSE = "Hello, mates!";
+  private static final String EXPECTED_RESPONSE = "How are you, mates!";
   private static final int EXPECTED_PORT = 8083;
   @Autowired
   private MockMvc mockMvc;
