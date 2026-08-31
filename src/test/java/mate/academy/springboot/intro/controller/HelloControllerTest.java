@@ -1,4 +1,4 @@
-package mate.academy.springboot.intro;
+package mate.academy.springboot.intro.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
